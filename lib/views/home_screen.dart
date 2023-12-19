@@ -11,13 +11,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
         leading: Icon(Icons.menu_rounded),
         title: Row(children: [
           CircleAvatar(
             radius: 25,
             backgroundImage: Image.asset(
               'assets/images/profile image1.png',
+
             ).image,
           ),
           SizedBox(
@@ -56,12 +56,15 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
+              width: double.infinity,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(bottomRight: Radius.circular(20),bottomLeft: Radius.circular(20,)),
-               color: Constants.primaryColor
-              ),
+                  borderRadius: BorderRadius.only(
+                      bottomRight: Radius.circular(20),
+                      bottomLeft: Radius.circular(
+                        20,
+                      )),
+                  color: Constants.primaryColor),
               child: Column(
-
                 children: [
                   Row(
                     children: [
@@ -79,7 +82,6 @@ class HomeScreen extends StatelessWidget {
                                 height: 20,
                               ),
                               FristContainerthiredSection()
-
                             ],
                           ),
                         ),
@@ -94,24 +96,36 @@ class HomeScreen extends StatelessWidget {
               margin: EdgeInsets.all(10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
-                gradient:LinearGradient(
-                    colors: [
-                      Constants.primaryColor.withOpacity(.5),
-                      Color(0xffF14985).withOpacity(.5)
-                    ]
-                  ),
+                gradient: LinearGradient(colors: [
+                  Constants.primaryColor.withOpacity(.5),
+                  Color(0xffF14985).withOpacity(.5)
+                ]),
               ),
               child: Row(
                 children: [
                   Column(
                     children: [
-                      Text('Share & Get',style: TextStyle(color: Colors.white,fontSize: 20),),
-                      Text('Get 2x point for every steps, only valid for today',overflow:TextOverflow.fade ,style: TextStyle(color: Colors.white,fontSize: 10,),),
-
+                      Text(
+                        'Share & Get',
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                      Text(
+                        'Get 2x point for every steps, only valid for today',
+                        overflow: TextOverflow.fade,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 10,
+                        ),
+                      ),
                     ],
                   ),
-
-                  Expanded(child: Image.asset('assets/images/onbording.png',width: 150,height: 100,fit: BoxFit.contain,))
+                  Expanded(
+                      child: Image.asset(
+                    'assets/images/onbording.png',
+                    width: 150,
+                    height: 100,
+                    fit: BoxFit.contain,
+                  ))
                 ],
               ),
             ),
@@ -119,8 +133,18 @@ class HomeScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 16.0),
               child: Row(
                 children: [
-                  Expanded(child: Text('History',style: TextStyle(color: Colors.white,fontSize: 16),)),
-                  TextButton(onPressed: (){}, child:Text('See All',style: TextStyle(color: Constants.primaryColor,fontSize: 16),),
+                  Expanded(
+                      child: Text(
+                    'History',
+                    style: TextStyle(color: Colors.white, fontSize: 16),
+                  )),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'See All',
+                      style: TextStyle(
+                          color: Constants.primaryColor, fontSize: 16),
+                    ),
                   )
                 ],
               ),
@@ -128,8 +152,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
-        extendBody: true,
-
+      extendBody: true,
     );
   }
 }
@@ -144,23 +167,25 @@ class FristContainerFristSection extends StatelessWidget {
         Column(
           children: [
             Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  '14,000/',
-                  style: TextStyle(color: Colors.white.withOpacity(.5)),
-                ),
-                Text(
-                  '15,000',
-                  style: TextStyle(color: Colors.white, fontSize: 18),
-                ),
-                Text(
-                  'steps',
-                  style: TextStyle(color: Colors.white.withOpacity(.5)),
-                ),
-                SizedBox(
-                  width: 50,
-                ),
+               Row(
+                 children: [
+                   Text(
+                     '14,000/',
+                     style: TextStyle(color: Colors.white.withOpacity(.5)),
+                   ),
+                   Text(
+                     '15,000',
+                     style: TextStyle(color: Colors.white, fontSize: 18),
+                   ),
+                   Text(
+                     'steps',
+                     style: TextStyle(color: Colors.white.withOpacity(.5)),
+                   ),
+                 ],
+               ),
+ // .................Can't Make Spacer() here..................
                 Text(
                   'Level 5',
                   style: TextStyle(color: Color(0xffFFC932), fontSize: 18),
@@ -202,8 +227,7 @@ class FristContainerSecondSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 335,
-      //....................................................Width OF Container
+     //...................Error when Write =>   Width : double.infinity ......................
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
           border: Border.all(
@@ -215,24 +239,15 @@ class FristContainerSecondSection extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           CircleAvatar(
-            //......................................................................Hight Of Image
-            backgroundColor: Constants.primaryColor,
+            //............................................................Hight Of Image
             radius: 40,
             backgroundImage: Image.asset(
-              'assets/images/runner.png',
-              fit: BoxFit.contain,
+              'assets/images/Facebook-logo.png',
+            width: 20,
             ).image,
-            child: Align(
-              alignment: Alignment.bottomRight,
-              child: CircleAvatar(
-                backgroundColor: Colors.green,
-                radius: 7,
-              ),
-            ),
+
           ),
-          SizedBox(
-            width: 10,
-          ),
+
           Column(
             children: [
               Text(
@@ -300,62 +315,83 @@ class FristContainerSecondSection extends StatelessWidget {
     );
   }
 }
+
 class FristContainerthiredSection extends StatelessWidget {
   const FristContainerthiredSection({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return                         Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-
-    children: [
-    Container(
-
-    decoration: BoxDecoration(
-    color:  Constants.backGroundColor.withOpacity(.2),
-    borderRadius: BorderRadius.circular(20)
-    ),
-    width: 140,
-    height: 120,
-    child:
-    Column(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-    Text('53,524',style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),),
-    Row(
-    mainAxisAlignment: MainAxisAlignment.center,
-    children: [
-Icon(Icons.cloud_outlined,color: Colors.white,),
-Text('Steps',style: TextStyle(color: Colors.white),),
-],
-),
-],
-),
-),
-SizedBox(width: 50,),
-Container(
-
-decoration: BoxDecoration(
-color:  Constants.backGroundColor.withOpacity(.2),
-borderRadius: BorderRadius.circular(20)
-),
-width: 140,
-height: 120,
-child:        Column(
-mainAxisAlignment: MainAxisAlignment.center,
-children: [
-Text('1000',style: TextStyle(color: Colors.white,fontSize: 22,fontWeight: FontWeight.bold),),
-Row(
-mainAxisAlignment: MainAxisAlignment.center,
-children: [
-Icon(Icons.cloud_outlined,color: Colors.white,),
-Text('Earned Points',style: TextStyle(color: Colors.white),),
-],
-),
-],
-),
-)
-],
-);
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Container(
+          decoration: BoxDecoration(
+              color: Constants.backGroundColor.withOpacity(.2),
+              borderRadius: BorderRadius.circular(20)),
+          width: 140,
+          height: 120,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                '53,524',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.cloud_outlined,
+                    color: Colors.white,
+                  ),
+                  Text(
+                    'Steps',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+        SizedBox(
+          width: 50,
+        ),
+        Container(
+          decoration: BoxDecoration(
+              color: Constants.backGroundColor.withOpacity(.2),
+              borderRadius: BorderRadius.circular(20)),
+          width: 140,
+          height: 120,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                '1000',
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.cloud_outlined,
+                    color: Colors.white,
+                  ),
+                  Text(
+                    'Earned Points',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        )
+      ],
+    );
   }
 }
