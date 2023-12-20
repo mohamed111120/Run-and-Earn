@@ -8,7 +8,7 @@ class FristContainerthiredSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Container(
           decoration: BoxDecoration(
@@ -23,7 +23,7 @@ class FristContainerthiredSection extends StatelessWidget {
                 '53,524',
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 22,
+                    fontSize: 16,
                     fontWeight: FontWeight.bold),
               ),
               Row(
@@ -42,9 +42,7 @@ class FristContainerthiredSection extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(
-          width: 50,
-        ),
+
         Container(
           decoration: BoxDecoration(
               color: Constants.backGroundColor.withOpacity(.2),
@@ -58,7 +56,7 @@ class FristContainerthiredSection extends StatelessWidget {
                 '1000',
                 style: TextStyle(
                     color: Colors.white,
-                    fontSize: 22,
+                    fontSize: 16,
                     fontWeight: FontWeight.bold),
               ),
               Row(
@@ -70,7 +68,8 @@ class FristContainerthiredSection extends StatelessWidget {
                   ),
                   Text(
                     'Earned Points',
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(color: Colors.white,   fontSize: 10,
+                    ),
                   ),
                 ],
               ),

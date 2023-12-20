@@ -38,14 +38,14 @@ class FristContainerSecondSection extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.grey,
                     fontWeight: FontWeight.w300,
-                    fontSize: 16),
+                    fontSize: 14),
               ),
               SizedBox(
                 height: 10,
               ),
               Text(
                 'Today',
-                style: TextStyle(color: Color(0xff43C465), fontSize: 22),
+                style: TextStyle(color: Color(0xff43C465), fontSize: 18),
               ),
               SizedBox(
                 height: 10,
@@ -55,41 +55,38 @@ class FristContainerSecondSection extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.grey,
                     fontWeight: FontWeight.w300,
-                    fontSize: 16),
+                    fontSize: 14),
               ),
             ],
           ),
-          SizedBox(
-            width: 20,
-          ),
+       Spacer(),
           CircularPercentIndicator(
             radius: 50,
             center: Row(
               mainAxisAlignment: MainAxisAlignment.center,
+
               children: [
                 Icon(
                   Icons.man,
                   color: Colors.grey,
                   size: 45,
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(right: 3.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+
 //.....................Divider Did Not Appear
                       Text(
                         '2345',
-                        style: TextStyle(color: Colors.white, fontSize: 14),
+                        style: TextStyle(color: Colors.white, fontSize: 10),
                       ),
-                      Divider(color: Colors.grey, height: 3, thickness: 3),
                       Text(
                         '2345',
-                        style: TextStyle(color: Colors.green, fontSize: 14),
+                        style: TextStyle(color: Colors.green, fontSize: 10),
                       ),
                     ],
                   ),
-                )
+                SizedBox(width: 8,)
               ],
             ),
           )

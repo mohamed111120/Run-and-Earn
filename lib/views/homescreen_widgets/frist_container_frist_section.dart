@@ -6,6 +6,7 @@ class FristContainerFristSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Expanded(
           child: Column(
@@ -17,7 +18,7 @@ class FristContainerFristSection extends StatelessWidget {
                       children: [
                         Text(
                           '14,000/',
-                          style: TextStyle(color: Colors.white.withOpacity(.5)),
+                          style: TextStyle(color: Colors.white.withOpacity(.5),fontSize: 12),
                         ),
                         Text(
                           '15,000',
@@ -25,7 +26,7 @@ class FristContainerFristSection extends StatelessWidget {
                         ),
                         Text(
                           'steps',
-                          style: TextStyle(color: Colors.white.withOpacity(.5)),
+                          style: TextStyle(color: Colors.white.withOpacity(.5),fontSize: 12),
                         ),
                       ],
                     ),
@@ -37,12 +38,11 @@ class FristContainerFristSection extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
-                height: 5,
-              ),
+
               Container(
+
                 height: 10,
-                width: 250,
+                width: double.infinity,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     gradient: LinearGradient(colors: [
@@ -54,9 +54,7 @@ class FristContainerFristSection extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(
-          width: 20,
-        ),
+
         Image.asset(
           'assets/images/Level badge.png',
           height: 65,

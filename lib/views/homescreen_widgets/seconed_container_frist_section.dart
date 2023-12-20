@@ -19,29 +19,30 @@ class SeconedContainerFristSection extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Column(
-            children: [
-              Text(
-                'Share & Get',
-                style: TextStyle(color: Colors.white, fontSize: 20),
-              ),
-              Text(
-                'Get 2x point for every steps, only valid for today',
-                overflow: TextOverflow.fade,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 10,
-                ),
-              ),
-            ],
-          ),
           Expanded(
-              child: Image.asset(
-                'assets/images/onbording.png',
-                width: 150,
-                height: 100,
-                fit: BoxFit.contain,
-              ))
+            child: Column(
+              children: [
+                Text(
+                  'Share & Get',
+                  style: TextStyle(color: Colors.white, fontSize: 20),
+                ),
+                Text(
+                  'Get 2x point for every steps, only valid for today',
+                  overflow: TextOverflow.fade,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 10,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Image.asset(
+            'assets/images/onbording.png',
+            width: 150,
+            height: 100,
+            fit: BoxFit.contain,
+          )
         ],
       ),
     )
