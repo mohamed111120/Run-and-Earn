@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../utils.dart';
 
 class SeconedContainerSeconedSection extends StatelessWidget {
-  const SeconedContainerSeconedSection({Key? key}) : super(key: key);
-
+  const SeconedContainerSeconedSection({Key? key, required this.onTap}) : super(key: key);
+final VoidCallback onTap ;
   @override
   Widget build(BuildContext context) {
     return            Padding(
@@ -12,9 +12,12 @@ class SeconedContainerSeconedSection extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-              child: Text(
-                'History',
-                style: TextStyle(color: Colors.white, fontSize: 16),
+              child: GestureDetector(
+                onTap: onTap,
+                child: Text(
+                  'History',
+                  style: TextStyle(color: Colors.white, fontSize: 16),
+                ),
               )),
           TextButton(
             onPressed: () {},

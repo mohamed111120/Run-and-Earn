@@ -21,7 +21,7 @@ class CustomButton extends StatelessWidget {
       onPressed: onTap,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [Text(text,style: TextStyle(fontSize: 20),), Icon(icon)],
+        children: [Text(text,style: TextStyle(fontSize: 20,color: Colors.white),), Icon(icon)],
       ),
       style: ElevatedButton.styleFrom(
           fixedSize: Size(width, hight),

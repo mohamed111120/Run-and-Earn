@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:run_and_earn/views/VerifyingEmail.dart';
+import 'package:run_and_earn/views/acount_updated.dart';
 import 'package:run_and_earn/views/get_started.dart';
 import 'package:run_and_earn/views/home_screen.dart';
 import 'package:run_and_earn/views/login.dart';
@@ -20,6 +22,8 @@ class RunEarnApp extends StatelessWidget {
         OnboardingScreen.id : (context) => OnboardingScreen(),
         LogInScreen.id :(context) => LogInScreen(),
         HomeScreen.id :(context) => HomeScreen(),
+        AcountUpdated.id :(context) => AcountUpdated(),
+        VerifyingEmail.id :(context) => VerifyingEmail(),
       },
       initialRoute:  GetStartedScreen.id ,
     );

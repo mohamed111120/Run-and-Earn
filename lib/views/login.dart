@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:run_and_earn/utils.dart';
+import 'package:run_and_earn/views/acount_updated.dart';
 import 'package:run_and_earn/views/home_screen.dart';
 import 'package:run_and_earn/widgets/custom_button.dart';
 import 'package:run_and_earn/widgets/custom_text_field.dart';
@@ -60,15 +61,15 @@ class LogInScreen extends StatelessWidget {
 
                   ),
                 ),
-                Text('Remember Me ',style: TextStyle(color: Colors.white),),
+                Text('Remember Me ',style: TextStyle(color: Colors.white,fontSize: 10),),
                 Spacer(
 
                 ),
-                Text('Forgot Password ?',style: TextStyle(color: Constants.primaryColor),),
+                Text('Forgot Password ?',style: TextStyle(color: Constants.primaryColor,fontSize: 10),),
               ],
             ),
             CustomButton(onTap: () {
-              Navigator.pushNamed(context, HomeScreen.id);
+              Navigator.pushNamed(context, AcountUpdated.id);
             },width: double.infinity,hight: 50,text: 'Log In',),
             SizedBox(height: 5,),
 

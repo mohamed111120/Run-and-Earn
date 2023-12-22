@@ -10,6 +10,7 @@ import 'package:run_and_earn/views/homescreen_widgets/seconed_container_second_s
 import 'package:run_and_earn/views/login.dart';
 import 'package:run_and_earn/views/onboarding.dart';
 
+import 'VerifyingEmail.dart';
 import 'homescreen_widgets/frist_container_frist_section.dart';
 import 'homescreen_widgets/frist_container_seconed_section.dart';
 import 'homescreen_widgets/frist_container_theird_section.dart';
@@ -74,52 +75,57 @@ class _HomeScreenState extends State<HomeScreen> {
         elevation: 0,
       ),
       backgroundColor: Constants.backGroundColor.withOpacity(1),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            width: double.infinity,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                    bottomRight: Radius.circular(20),
-                    bottomLeft: Radius.circular(
-                      20,
-                    )),
-                color: Constants.primaryColor),
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Container(
-                    child: Column(
-                      children: [
-                        FristContainerFristSection(),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        FristContainerSecondSection(),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        FristContainerthiredSection()
-                      ],
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              width: double.infinity,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      bottomRight: Radius.circular(20),
+                      bottomLeft: Radius.circular(
+                        20,
+                      )),
+                  color: Constants.primaryColor),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Container(
+                      child: Column(
+                        children: [
+                          FristContainerFristSection(),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          FristContainerSecondSection(),
+                          SizedBox(
+                            height: 20,
+                          ),
+                          FristContainerthiredSection()
+                        ],
+                      ),
                     ),
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),
             ),
-          ),
-          SeconedContainerFristSection(),
-          SeconedContainerSeconedSection(),
-        ],
+            SeconedContainerFristSection(),
+            SeconedContainerSeconedSection(onTap: () {
+              Navigator.pushNamed(context, VerifyingEmail.id);
+
+            },),
+          ],
+        ),
       ),
       extendBody: true,
-      bottomNavigationBar: Padding(
-        padding: EdgeInsets.only(bottom: 10),
+      bottomNavigationBar: Container(
+        color: Colors.orange,
         child: DotNavigationBar(
+
+
           backgroundColor: Constants.primaryColor.withOpacity(.5),
-          paddingR: EdgeInsets.all(6),
-          margin: EdgeInsets.symmetric(horizontal: 10),
           currentIndex: _SelecteTab.values.indexOf(_selecteTab),
           dotIndicatorColor: Colors.black,
           unselectedItemColor: Colors.grey[300],
